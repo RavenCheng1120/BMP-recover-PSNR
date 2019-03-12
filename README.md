@@ -8,13 +8,15 @@ sImg = cv2.cvtColor(sImg, cv2.COLOR_BGR2LAB)
 sMean, sStd = cv2.meanStdDev(sImg)
 sMean = np.hstack(np.around(sMean, decimals=2))
 sStd = np.hstack(np.around(sStd, decimals=2))
-```  
-     
+```
+
+    
 色彩轉換的公式    
 ```python
 R = (S - sMean) * (tStd / sStd) + tMean
 ```
-     
+   
+   
 source image:    
 ![image](https://github.com/RavenCheng1120/BMP-recover-PSNR/blob/master/source/s5.bmp)    
 
@@ -28,6 +30,6 @@ recover image:
 ![image](https://github.com/RavenCheng1120/BMP-recover-PSNR/blob/master/recoverSource/rs5.bmp)     
 
 此程式將transfer result轉為recover image，計算recover image和source image的峰值信噪比PSNR，輸出在csv檔案裡。     
-使用pyinstaller將python打包成exe檔 `pyinstaller -F .\hello.py`    
+使用pyinstaller將python打包成exe檔 `pyinstaller -F .\4105056005-DCSA-04.py`    
     
 圖源:https://unsplash.com/
