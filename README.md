@@ -1,14 +1,14 @@
 # BMP-recover-PSNR
-##圖片的色彩轉換與計算PSNR    
+## 圖片的色彩轉換與計算PSNR    
 Recover from color transfer. Calculate PSNR between source and recovered images.    
 
 讀取照片的RGB值，平均值，標準差    
 ```python
-  sImg = cv2.imread('./source/'+source)
-	sImg = cv2.cvtColor(sImg, cv2.COLOR_BGR2LAB)
-  sMean, sStd = cv2.meanStdDev(sImg)
-  sMean = np.hstack(np.around(sMean, decimals=2))
-	sStd = np.hstack(np.around(sStd, decimals=2))
+sImg = cv2.imread('./source/'+source)
+sImg = cv2.cvtColor(sImg, cv2.COLOR_BGR2LAB)
+sMean, sStd = cv2.meanStdDev(sImg)
+sMean = np.hstack(np.around(sMean, decimals=2))
+sStd = np.hstack(np.around(sStd, decimals=2))
 ```
 
 source image:    
