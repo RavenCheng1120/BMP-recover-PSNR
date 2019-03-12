@@ -14,7 +14,7 @@ sStd = np.hstack(np.around(sStd, decimals=2))
 ```python
 R = (S - sMean) * (tStd / sStd) + tMean
 ```
-------
+
 source image:    
 ![image](https://github.com/RavenCheng1120/BMP-recover-PSNR/blob/master/source/s5.bmp)    
 
