@@ -15,6 +15,15 @@ sStd = np.hstack(np.around(sStd, decimals=2))
 R = (S - sMean) * (tStd / sStd) + tMean
 ```
 
+#### 計算PSNR的公式    
+```python
+mse += (rImg[i,j]-sImg[i,j])**2
+mse = (mse[0]+mse[1]+mse[2])/3
+mse = np.around(mse/(height*width), decimals=2)
+if mse != 0:
+     = np.around(log10((255*255)/mse)*10, decimals=2)
+```
+
 source image:    
 ![image](https://github.com/RavenCheng1120/BMP-recover-PSNR/blob/master/source/s5.bmp)    
 
